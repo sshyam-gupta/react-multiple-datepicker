@@ -11,7 +11,8 @@ const Root = styled.div`
   color: rgba(0, 0, 0, 0.87);
   user-select: none;
   overflow: auto;
-  max-width: 479px:
+  max-width: 479px;
+  display: flex;
 `;
 
 const CalendarContainer = styled.div`
