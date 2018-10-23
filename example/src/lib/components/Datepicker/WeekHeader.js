@@ -3,17 +3,16 @@ import styled from 'styled-components';
 
 const StyledDiv = styled.div`
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: 500;
-  line-height: 1.25;
-  opacity: 0.8;
-  text-align: center;
 `;
 
 const StyledSpan = styled.span`
-  padding: 0.5rem;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  margin: 4px;
 `;
 
 const WeekHeader = () => (
