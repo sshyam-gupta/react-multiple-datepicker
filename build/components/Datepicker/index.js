@@ -124,7 +124,7 @@ function (_Component) {
     _this.state = {
       view: _utils.default.clone(def),
       selected: _utils.default.clone(def),
-      selectedDates: props.selected ? [_utils.default.clone(def)] : [],
+      selectedDates: props.selectedDates || [],
       minDate: null,
       maxDate: null,
       open: false

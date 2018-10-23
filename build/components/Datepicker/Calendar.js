@@ -21,7 +21,7 @@ var _CalendarButtons = _interopRequireDefault(require("./CalendarButtons"));
 
 var _DateDisplay = _interopRequireDefault(require("./DateDisplay"));
 
-var _templateObject = _taggedTemplateLiteral(["\n  color: rgba(0, 0, 0, 0.87);\n  user-select: none;\n  overflow: auto;\n  max-width: 479px:\n"], ["\n  color: rgba(0, 0, 0, 0.87);\n  user-select: none;\n  overflow: auto;\n  max-width: 479px:\n"]),
+var _templateObject = _taggedTemplateLiteral(["\n  color: rgba(0, 0, 0, 0.87);\n  user-select: none;\n  overflow: auto;\n  max-width: 479px;\n  display: flex;\n"], ["\n  color: rgba(0, 0, 0, 0.87);\n  user-select: none;\n  overflow: auto;\n  max-width: 479px;\n  display: flex;\n"]),
     _templateObject2 = _taggedTemplateLiteral(["\n  display: flex;\n  justify-items: space-between;\n  flex-direction: column;\n  font-size: 12px;\n  font-weight: 400;\n  padding: 0px 8px;\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n"], ["\n  display: flex;\n  justify-items: space-between;\n  flex-direction: column;\n  font-size: 12px;\n  font-weight: 400;\n  padding: 0px 8px;\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n"]),
     _templateObject3 = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"], ["\n  display: flex;\n  flex-direction: column;\n"]);
 

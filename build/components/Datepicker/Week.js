@@ -13,11 +13,9 @@ var _utils = _interopRequireDefault(require("./utils"));
 
 var _dateUtils = require("./dateUtils");
 
-var _templateObject = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  height: 34px;\n  margin-bottom: 2px;\n"], ["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  height: 34px;\n  margin-bottom: 2px;\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  border: 10px;\n  box-sizing: border-box;\n  display: inline-block;\n  font-family: Roboto, sans-serif;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  cursor: pointer;\n  text-decoration: none;\n  margin: 0;\n  padding: 0.5rem;\n  outline: none;\n  font-size: inherit;\n  font-weight: 400;\n  position: relative;\n  z-index: 1;\n  background: none;\n  text-align: right;\n"], ["\n  border: 10px;\n  box-sizing: border-box;\n  display: inline-block;\n  font-family: Roboto, sans-serif;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  cursor: pointer;\n  text-decoration: none;\n  margin: 0;\n  padding: 0.5rem;\n  outline: none;\n  font-size: inherit;\n  font-weight: 400;\n  position: relative;\n  z-index: 1;\n  background: none;\n  text-align: right;\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n  border: 10px;\n  box-sizing: border-box;\n  display: inline-block;\n  font-family: Roboto, sans-serif;\n  text-decoration: none;\n  margin: 0;\n  padding: 0.5rem;\n  outline: none;\n  font-size: inherit;\n  font-weight: 400;\n  position: relative;\n  z-index: 1;\n  background: none;\n"], ["\n  border: 10px;\n  box-sizing: border-box;\n  display: inline-block;\n  font-family: Roboto, sans-serif;\n  text-decoration: none;\n  margin: 0;\n  padding: 0.5rem;\n  outline: none;\n  font-size: inherit;\n  font-weight: 400;\n  position: relative;\n  z-index: 1;\n  background: none;\n"]),
-    _templateObject4 = _taggedTemplateLiteral(["\n  background-color: rgb(0, 151, 167);\n  height: 34px;\n  border-radius: 50%;\n  left: 0;\n  opacity: ", ";\n  position: absolute;\n  top: 0;\n  transform: scale(", ");\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  width: 34px;\n"], ["\n  background-color: rgb(0, 151, 167);\n  height: 34px;\n  border-radius: 50%;\n  left: 0;\n  opacity: ", ";\n  position: absolute;\n  top: 0;\n  transform: scale(", ");\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  width: 34px;\n"]),
-    _templateObject5 = _taggedTemplateLiteral(["\n  color: ", ";\n  font-weight: ", ";\n  font-size: ", ";\n  position: relative;\n  color: ", ";\n"], ["\n  color: ", ";\n  font-weight: ", ";\n  font-size: ", ";\n  position: relative;\n  color: ", ";\n"]);
+var _templateObject = _taggedTemplateLiteral(["\n  display: flex;\n"], ["\n  display: flex;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  font-family: Roboto, sans-serif;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  cursor: ", ";\n  text-align: center;\n  border-radius: 50%;\n  width: 34px;\n  height: 34px;\n  line-height: 34px;\n  margin: 4px;\n  border: transparent;\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  background-color: ", ";\n"], ["\n  font-family: Roboto, sans-serif;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  cursor: ", ";\n  text-align: center;\n  border-radius: 50%;\n  width: 34px;\n  height: 34px;\n  line-height: 34px;\n  margin: 4px;\n  border: transparent;\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  background-color: ", ";\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  color: ", ";\n  font-weight: ", ";\n  font-size: ", ";\n  color: ", ";\n"], ["\n  color: ", ";\n  font-weight: ", ";\n  font-size: ", ";\n  color: ", ";\n"]);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39,30 +37,26 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var StyledWeek = _styledComponents.default.div(_templateObject);
 
-var DayButton = _styledComponents.default.button(_templateObject2);
-
-var Blank = _styledComponents.default.div(_templateObject3);
-
-var DayBackdrop = _styledComponents.default.div(_templateObject4, function (_ref) {
-  var selected = _ref.selected;
-  return selected ? '1' : '0';
+var DayButton = _styledComponents.default.div(_templateObject2, function (_ref) {
+  var disabled = _ref.disabled;
+  return disabled === true ? 'not-allowed' : disabled === false ? 'pointer' : 'auto';
 }, function (_ref2) {
   var selected = _ref2.selected;
-  return selected ? '1' : '0';
+  return selected ? 'rgba(0, 151, 167, 1)' : 'rgba(0, 151, 167, 0)';
 });
 
-var Day = _styledComponents.default.div(_templateObject5, function (_ref3) {
+var Day = _styledComponents.default.div(_templateObject3, function (_ref3) {
   var selected = _ref3.selected;
   return selected ? 'rgb(255, 255, 255)' : 'rgba(0, 0, 0, 0.87)';
 }, function (_ref4) {
   var today = _ref4.today;
-  return today ? 'bold' : '400';
+  return today ? '500' : '400';
 }, function (_ref5) {
   var today = _ref5.today;
-  return today ? '1.1rem' : 'auto';
+  return today ? '1.1rem' : '';
 }, function (_ref6) {
   var disabled = _ref6.disabled;
-  return disabled ? 'lightgrey' : 'auto';
+  return disabled ? 'lightgrey' : '';
 });
 
 var Week =
@@ -123,16 +117,14 @@ function (_Component) {
             },
             disabled: isDisabled,
             selected: isSelected
-          }, _react.default.createElement(DayBackdrop, {
-            selected: isSelected
-          }), _react.default.createElement(Day, {
+          }, _react.default.createElement(Day, {
             selected: isSelected,
             disabled: isDisabled,
             today: isToday
           }, dayInNumeric.format(day)));
         }
 
-        return _react.default.createElement(Blank, {
+        return _react.default.createElement(DayButton, {
           key: "blank-".concat(i)
         });
       }));
